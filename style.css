@@ -1,0 +1,143 @@
+.clock {
+    margin: 200px auto;
+    border: 5px solid rgb(146, 134, 134);
+    box-shadow: 0 0 10px 2px rgb(134, 88, 88);
+    background-color: #b48c8c5e;  
+    border-radius: 50%;  
+    height: 500px;  
+    position:relative; 
+    width: 500px; 
+} 
+
+
+.nine, .six, .three, .twelve {
+    position: absolute;
+    font-weight: 600;
+    font-size: 60px;
+    opacity: 0;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.twelve {
+    left: 225px;
+    top: 25px;
+    animation-name: twelve_1; 
+}
+
+.three {
+    left: 425px;
+    top: 219px;
+    animation-name: three_1; 
+}
+
+.six {
+    left: 219px;
+    top: 415px;
+    animation-name: six_1;
+}
+   
+.nine {
+    left: 25px;
+    top: 225px;
+    animation-name: nine_1;
+}
+
+ 
+.hours, .minutes, .seconds {
+    position: absolute;
+    background: rgb(97, 89, 89); 
+    border-radius: 50% 50% 0 0;
+    bottom: 250px; 
+    transform-origin: 50% 100%; 
+    animation-name: course;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.hours {  
+    height: 100px; 
+    left: 246px; 
+    width: 8px;
+    animation-duration: 43200s;
+    animation-timing-function: steps(12); 
+}
+
+.minutes { 
+    height: 150px; 
+    left: 247px; 
+    width: 6px;
+    animation-duration: 3600s;
+    animation-timing-function:linear;    
+}
+
+.seconds {  
+    height: 150px; 
+    left: 250px; 
+    width: 3px;
+    animation-duration: 60s;
+    animation-timing-function:steps(60);    
+}
+
+@keyframes twelve_1 {
+    0% {
+        opacity: 0;
+        color: blue;
+    } 
+    100% {
+        opacity: 1;
+        color: crimson;
+    }
+}
+
+@keyframes three_1 {
+    25% {
+        opacity: 0;
+        color: blue;
+    } 
+    100% {
+        opacity: 1;
+        color: crimson;
+    }
+}
+
+@keyframes six_1 {
+    50% {
+        opacity: 0;
+        color: blue;
+    } 
+    100% {
+        opacity: 1;
+        color: crimson;
+    }
+}
+
+@keyframes nine_1 {
+    75% {
+        opacity: 0;
+        color: blue;
+    } 
+    100% {
+        opacity: 1;
+        color: crimson;
+    }
+}
+
+@keyframes course {
+    100% { 
+        transform: rotate(360deg);
+    }
+}
+
+
+.circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(97, 89, 89);
+    box-shadow: 0 0 10px 2px rgb(117, 106, 106);
+    border-radius: 50%;
+    left: 242px;
+    top: 242px;
+}
